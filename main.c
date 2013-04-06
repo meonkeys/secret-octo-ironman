@@ -9,7 +9,7 @@ int f1(void) {
  * This function takes no input and always returns zero.
  */
 int f2(void) {
-    return 5-5;
+    return -3+6-3;
 }
 
 /*
