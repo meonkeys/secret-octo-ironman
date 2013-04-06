@@ -1,7 +1,10 @@
-secret-octo-ironman
-===================
+# secret-octo-ironman
 
-Test.
+This is a demonstration of git's
+[bisect](http://git-scm.com/book/ch6-5.html#Binary-Search) feature.
 
-Worked!
-ok, cool.
+Demo script:
+
+    git bisect good last-known-good-commit
+    git bisect bad
+    git bisect run make
