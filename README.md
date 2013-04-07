@@ -5,6 +5,6 @@ This is a demonstration of git's
 
 Demo script:
 
-    git bisect good last-known-good-commit
     git bisect bad
+    git bisect good v1.0
     git bisect run make
