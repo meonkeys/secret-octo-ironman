@@ -25,7 +25,7 @@ I try to visually scan the changes with
 
 I see tons of changes to `f2()`, but it's not easy to quickly find the commit
 introducing the bug by visually scanning the changes. Let's let git do the
-tedious job of testing different revisions to figure out where things started
+tedious job of testing many revisions to figure out where things started
 breaking.
 
 I'm currently looking at the tip of my `master` branch. First I tell
@@ -33,9 +33,9 @@ git that I intend to bisect.
 
     git bisect start
 
-Again, I didn't start searching yet, I just announced my intent. `init` or
-`config` would probably make more sense than `start` here. But `start` it is,
-so let's continue.
+Again, git didn't actually start searching yet. `init` or `config` would
+probably make more sense than `start` here. But `start` it is, so let's
+continue.
 
 I must provide at least one bad and one good commit to git before I can
 actually kick off the binary search for the first bad commit. I've run make on
@@ -55,7 +55,7 @@ From this last command, git returns
     [0df160395e063ba141ad37c75c654ea0903957a3] change 66a
 
 Git picked a commit halfway between the given bad and good commits and
-guessed that 8 more steps would be requrired to find the first bad commit.
+guessed that 8 more steps would be required to find the first bad commit.
 
 Finally, I can kick off the search for the culprit:
 
