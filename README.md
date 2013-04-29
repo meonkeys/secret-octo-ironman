@@ -90,3 +90,9 @@ This returns me to the tip of my `master` branch where I then fix the bug:
     sed -i 's/return 4/return 5/' main.c
     make
     git commit -m 'fixed bug (introduced in 51166af6)' main.c
+
+# The End
+
+You made it! Thanks for reading.
+
+Bitcoin tips welcome: 1KPGok7ScgAGWgJ9HqxCUKVK4sb1k15ABH
