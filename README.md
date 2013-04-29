@@ -28,10 +28,25 @@ introducing the bug by visually scanning the changes. Let's let git do the
 tedious job of testing different revisions to figure out where things started
 breaking.
 
-    # start bisecting and mark this commit bad
+I'm currently looking at the tip of my `master` branch. First we tell
+git that we intend to bisect.
+
     git bisect start
+
+Again, we didn't start searching yet, we just announced our intent. `init` or
+`config` would probably make more sense than `start` here. But `start` it is,
+so let's continue.
+
+We must provide at least one bad and one good commit to git before we can
+actually kick off the binary search for the first bad commit. We've run make on
+the tip of `master`, so we know this commit is bad:
+
     git bisect bad
-    # all I know is v1.0 used to work
+
+And I know for sure stuff used to work back when I released v1.0. I even
+tagged that commit. If I want to make sure, I can `checkout v1.0` and run
+`make`. But let's assume that the bug did not exist in `v1.0`:
+
     git bisect good v1.0
 
 From this last command, git returns
