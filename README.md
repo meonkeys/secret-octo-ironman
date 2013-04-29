@@ -28,18 +28,18 @@ introducing the bug by visually scanning the changes. Let's let git do the
 tedious job of testing different revisions to figure out where things started
 breaking.
 
-I'm currently looking at the tip of my `master` branch. First we tell
-git that we intend to bisect.
+I'm currently looking at the tip of my `master` branch. First I tell
+git that I intend to bisect.
 
     git bisect start
 
-Again, we didn't start searching yet, we just announced our intent. `init` or
+Again, I didn't start searching yet, I just announced my intent. `init` or
 `config` would probably make more sense than `start` here. But `start` it is,
 so let's continue.
 
-We must provide at least one bad and one good commit to git before we can
-actually kick off the binary search for the first bad commit. We've run make on
-the tip of `master`, so we know this commit is bad:
+I must provide at least one bad and one good commit to git before I can
+actually kick off the binary search for the first bad commit. I've run make on
+the tip of `master`, so I know this commit is bad:
 
     git bisect bad
 
@@ -57,7 +57,7 @@ From this last command, git returns
 Git picked a commit halfway between the given bad and good commits and
 guessed that 8 more steps would be requrired to find the first bad commit.
 
-Finally, we can kick off the search for the culprit:
+Finally, I can kick off the search for the culprit:
 
     git bisect run make
 
