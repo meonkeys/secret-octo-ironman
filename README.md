@@ -65,6 +65,12 @@ In the output, I see
 
     041cd21c815270cb1cde0665744437d4a0f92edf is the first bad commit
 
+BAM. Mystery solved! And it only took the time required for git to
+automatically test a handful of commits. Luckily I didn't need to hand-test at
+each step of the binary search, but if I did I would have done my test and
+manually run `git bisect good` or `git bisect bad` after each commit git sends
+me to examine.
+
 Git leaves me at the commit *just before* the commit introducing the bug.
 
 To see the change introducing the bug I can use
