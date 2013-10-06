@@ -1,13 +1,9 @@
-/*
- * This function takes no input and always returns five.
- */
+/* This function takes no input and always returns five. */
 int f1(void) {
     return 4;
 }
 
-/*
- * This function takes no input and always returns zero.
- */
+/* This function takes no input and always returns zero. */
 int f2(void) {
     return 0;
 }
